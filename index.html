@@ -1,0 +1,1173 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مركز حذيفية بن اليمان الصيفي</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #2c5e92;
+            --secondary-color: #f7b733;
+            --accent-color: #4abdac;
+            --light-color: #f7f9fc;
+            --dark-color: #333;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Tajawal', sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            color: var(--dark-color);
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 20px 0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://a.top4top.io/p_3463hcooj1.png') no-repeat center left;
+            background-size: contain;
+            opacity: 0.1;
+            z-index: 0;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo img {
+            height: 80px;
+            margin-left: 20px;
+        }
+        
+        .logo-text h1 {
+            font-size: 28px;
+            margin-bottom: 5px;
+            color: var(--light-color);
+        }
+        
+        .logo-text p {
+            font-size: 16px;
+            opacity: 0.9;
+        }
+        
+        .date-badge {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 30px;
+            font-weight: bold;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+        }
+        
+        .date-badge i {
+            margin-left: 10px;
+            font-size: 20px;
+        }
+        
+        /* Navigation */
+        nav {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-right: 20px;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark-color);
+            font-weight: 500;
+            padding: 5px 10px;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        .register-btn {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+        }
+        
+        .register-btn:hover {
+            background-color: #e6a52a;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        
+        .register-btn i {
+            margin-left: 8px;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(44, 94, 146, 0.8), rgba(44, 94, 146, 0.9)), url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80') no-repeat center center;
+            background-size: cover;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+        
+        .hero h2 {
+            font-size: 42px;
+            margin-bottom: 20px;
+            line-height: 1.3;
+        }
+        
+        .hero p {
+            font-size: 20px;
+            max-width: 800px;
+            margin: 0 auto 30px;
+            opacity: 0.9;
+        }
+        
+        .hero-btns {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        
+        .btn {
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+        }
+        
+        .btn-primary {
+            background-color: var(--secondary-color);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background-color: #e6a52a;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        
+        .btn-secondary {
+            background-color: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+        
+        .btn-secondary:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            transform: translateY(-2px);
+        }
+        
+        /* About Section */
+        .section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
+        }
+        
+        .section-title h2 {
+            font-size: 32px;
+            color: var(--primary-color);
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+        
+        .section-title h2::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            right: 50%;
+            transform: translateX(50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--secondary-color);
+        }
+        
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+        
+        .about-text {
+            flex: 1;
+        }
+        
+        .about-text h3 {
+            font-size: 24px;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+        
+        .about-text p {
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+        
+        .about-image {
+            flex: 1;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        /* Goals Section */
+        .goals {
+            background-color: var(--light-color);
+        }
+        
+        .goals-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .goal-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            border-top: 4px solid var(--primary-color);
+        }
+        
+        .goal-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .goal-card i {
+            font-size: 40px;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+        
+        .goal-card h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+        
+        .goal-card ul {
+            list-style-position: inside;
+            margin-right: 15px;
+        }
+        
+        .goal-card li {
+            margin-bottom: 8px;
+        }
+        
+        /* Schedule Section */
+        .schedule {
+            background-color: white;
+        }
+        
+        .tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .tab-btn {
+            padding: 10px 25px;
+            background-color: var(--light-color);
+            border: none;
+            border-radius: 30px;
+            margin: 0 10px 10px 0;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        
+        .tab-btn.active {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        .tab-content {
+            display: none;
+        }
+        
+        .tab-content.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .schedule-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .schedule-table th {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        
+        .schedule-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #eee;
+            text-align: center;
+        }
+        
+        .schedule-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        
+        .schedule-table tr:hover {
+            background-color: #f1f1f1;
+        }
+        
+        .time-slot {
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+        
+        .workshop-name {
+            color: var(--secondary-color);
+            font-weight: bold;
+        }
+        
+        /* Registration Section */
+        .registration {
+            background: linear-gradient(rgba(44, 94, 146, 0.9), rgba(44, 94, 146, 0.95)), url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80') no-repeat center center;
+            background-size: cover;
+            color: white;
+            text-align: center;
+            padding: 80px 0;
+        }
+        
+        .registration h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        
+        .registration p {
+            font-size: 18px;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            opacity: 0.9;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 50px 0 20px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-column h3 {
+            font-size: 20px;
+            margin-bottom: 20px;
+            color: var(--secondary-color);
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-column h3::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 50px;
+            height: 2px;
+            background-color: var(--secondary-color);
+        }
+        
+        .footer-column p {
+            margin-bottom: 15px;
+            opacity: 0.8;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            opacity: 0.8;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+        }
+        
+        .footer-links a:hover {
+            opacity: 1;
+            padding-right: 5px;
+        }
+        
+        .footer-links i {
+            margin-left: 8px;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: white;
+            transition: all 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-3px);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            opacity: 0.7;
+            font-size: 14px;
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .about-content {
+                flex-direction: column;
+            }
+            
+            .about-text, .about-image {
+                flex: none;
+                width: 100%;
+            }
+            
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .logo {
+                margin-bottom: 20px;
+                justify-content: center;
+            }
+            
+            .date-badge {
+                margin-top: 20px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+            }
+            
+            .nav-links {
+                margin-bottom: 20px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .hero h2 {
+                font-size: 32px;
+            }
+            
+            .hero p {
+                font-size: 18px;
+            }
+            
+            .hero-btns {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn {
+                width: 100%;
+                max-width: 300px;
+                justify-content: center;
+                margin-bottom: 10px;
+            }
+            
+            .section-title h2 {
+                font-size: 28px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .logo-text h1 {
+                font-size: 24px;
+            }
+            
+            .hero {
+                padding: 60px 0;
+            }
+            
+            .hero h2 {
+                font-size: 26px;
+            }
+            
+            .section {
+                padding: 50px 0;
+            }
+            
+            .goal-card {
+                padding: 20px;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <img src="https://a.top4top.io/p_3463hcooj1.png" alt="شعار مركز حذيفية بن اليمان الصيفي">
+                <div class="logo-text">
+                    <h1>مركز حذيفية بن اليمان الصيفي</h1>
+                    <p>برنامج صيفي تعليمي ترفيهي للطلاب من الصف الخامس إلى الحادي عشر</p>
+                </div>
+            </div>
+            <div class="date-badge">
+                <i class="far fa-calendar-alt"></i>
+                <span>6 - 17 يوليو 2024</span>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Navigation -->
+    <nav>
+        <div class="container nav-container">
+            <ul class="nav-links">
+                <li><a href="#about">عن المركز</a></li>
+                <li><a href="#goals">الأهداف</a></li>
+                <li><a href="#schedule">جدول الورش</a></li>
+                <li><a href="#registration">التسجيل</a></li>
+                <li><a href="#contact">اتصل بنا</a></li>
+            </ul>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfzml82utKmfZ8o5wYvwffoxfUBCin7JQ6H4wacCLY0Uhi7ig/viewform?usp=header" class="register-btn" target="_blank">
+                <i class="fas fa-user-plus"></i>
+                سجل الآن
+            </a>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h2>اكتشف مواهبك وطور مهاراتك في مركزنا الصيفي</h2>
+            <p>برنامج متكامل يجمع بين التعليم والترفيه لطلاب الصف الخامس إلى الحادي عشر خلال إجازة الصيف</p>
+            <div class="hero-btns">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSfzml82utKmfZ8o5wYvwffoxfUBCin7JQ6H4wacCLY0Uhi7ig/viewform?usp=header" class="btn btn-primary" target="_blank">
+                    <i class="fas fa-user-plus"></i>
+                    سجل الآن
+                </a>
+                <a href="#schedule" class="btn btn-secondary">
+                    <i class="far fa-calendar-alt"></i>
+                    جدول الورش
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>عن مركز حذيفية بن اليمان الصيفي</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>برنامج صيفي مميز للطلاب</h3>
+                    <p>يقدم مركز حذيفية بن اليمان الصيفي برنامجًا متكاملًا يجمع بين الجوانب التعليمية والترفيهية والتنموية لطلاب الصف الخامس إلى الحادي عشر خلال فترة الصيف.</p>
+                    <p>يهدف البرنامج إلى استثمار أوقات الطلاب في أنشطة مفيدة تطور مهاراتهم الشخصية والعلمية، وتعزز قيمهم الوطنية والاجتماعية، وتكسبهم معارف جديدة في مجالات متنوعة.</p>
+                    <p>يتميز البرنامج بتنوع الورش وشموليتها لمختلف الجوانب التي يحتاجها الطلاب في هذه المرحلة العمرية، مع التركيز على التعلم الممتع والخبرات العملية.</p>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1588072432836-e10032774350?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1472&q=80" alt="طلاب في ورشة عمل">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Goals Section -->
+    <section id="goals" class="section goals">
+        <div class="container">
+            <div class="section-title">
+                <h2>أهداف المركز</h2>
+            </div>
+            <div class="goals-grid">
+                <div class="goal-card">
+                    <i class="fas fa-users"></i>
+                    <h3>تنمية المهارات الشخصية والاجتماعية</h3>
+                    <ul>
+                        <li>تعزيز الثقة بالنفس لدى المشاركين وتقدير الذات</li>
+                        <li>تطوير مهارات التواصل والعمل الجماعي</li>
+                        <li>تنمية مهارات القيادة واتخاذ القرارات</li>
+                        <li>تعزيز القيم الوطنية والاجتماعية</li>
+                    </ul>
+                </div>
+                
+                <div class="goal-card">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h3>تعزيز التعلم</h3>
+                    <ul>
+                        <li>توفير فرص تعليمية مبتكرة وممتعة</li>
+                        <li>تحسين المهارات الأساسية (القراءة، الكتابة، الرياضيات)</li>
+                        <li>تعليم مهارات جديدة مثل البرمجة والرسم وتطبيقات الذكاء الاصطناعي</li>
+                        <li>تعزيز مهارات زيادة الاعمال لدى الطلبة</li>
+                    </ul>
+                </div>
+                
+                <div class="goal-card">
+                    <i class="fas fa-hand-holding-heart"></i>
+                    <h3>تعزيز القيم الوطنية والاجتماعية</h3>
+                    <ul>
+                        <li>صقل الشخصية وغرس القيم الأخلاقية والاجتماعية وتعزيز الهوية الوطنية</li>
+                        <li>غرس قيم المسؤولية والانتماء للمجتمع</li>
+                        <li>تنظيم أنشطة تطوعية لخدمة المجتمع</li>
+                        <li>تعزيز روح التعاون والنسامح بين المشاركين</li>
+                        <li>معالجة السلوكيات غير المرغوبة وتعزيز السلوكيات الإيجابية</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Schedule Section -->
+    <section id="schedule" class="section schedule">
+        <div class="container">
+            <div class="section-title">
+                <h2>جدول الورش</h2>
+            </div>
+            
+            <div class="tabs">
+                <button class="tab-btn active" onclick="openTab(event, 'week1')">الأسبوع الأول</button>
+                <button class="tab-btn" onclick="openTab(event, 'week2')">الأسبوع الثاني</button>
+            </div>
+            
+            <div id="week1" class="tab-content active">
+                <h3 style="text-align: center; margin-bottom: 20px; color: var(--primary-color);">الأسبوع الأول: 6 - 10 يوليو</h3>
+                <div class="table-responsive">
+                    <table class="schedule-table">
+                        <thead>
+                            <tr>
+                                <th>اليوم</th>
+                                <th>الفترة</th>
+                                <th>المجموعة الأولى</th>
+                                <th>المجموعة الثانية</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- الأحد 6/7 -->
+                            <tr>
+                                <td rowspan="4">الأحد<br>6 يوليو</td>
+                                <td class="time-slot">8:00 - 9:00</td>
+                                <td>
+                                    <span class="workshop-name">ورشة أردوينو</span><br>
+                                    <small>علمي تقني - مالك المعمري</small>
+                                </td>
+                                <td>
+                                    <span class="workshop-name">لغة الإشارة</span><br>
+                                    <small>ثقافي تعليمي - سعيد المجرفي</small>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="time-slot">9:00 - 10:00</td>
+                                <td>
+                                    <span class="workshop-name">ورشة أردوينو</span><br>
+                                    <small>علمي تقني - مالك المعمري</small>
+                                </td>
+                                <td>
+                                    <span class="workshop-name">مهارات كشفية</span><br>
+                                    <small>كشفي - عادل العبري</small>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="time-slot">10:30 - 11:30</td>
+                                <td>
+                                    <span class="workshop-name">لغة الإشارة</span><br>
+                                    <small>ثقافي تعليمي - سعيد المجرفي</small>
+                                </td>
+                                <td>
+                                    <span class="workshop-name">ورشة أردوينو</span><br>
+                                    <small>علمي تقني - مالك المعمري</small>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="time-slot">11:30 - 12:30</td>
+                                <td>
+                                    <span class="workshop-name">مهارات كشفية</span><br>
+                                    <small>كشفي - عادل العبري</small>
+                                </td>
+                                <td>
+                                    <span class="workshop-name">ورشة أردوينو</span><br>
+                                    <small>علمي تقني - مالك المعمري</small>
+                                </td>
+                            </tr>
+                            
+                            <!-- الاثنين 7/7 -->
+                            <tr>
+                                <td rowspan="4">الاثنين<br>7 يوليو</td>
+                                <td class="time-slot">8:00 - 9:00</td>
+                                <td>
+                                    <span class="workshop-name">مهارات السباحة</span><br>
+                                    <small>ثقافي مهاري - إبراهيم العبري</small>
+                                </td>
+                                <td>
+                                    <span class="workshop-name">ورشة الشطرنج</span><br>
+                                    <small>ثقافي علمي مهاري - حمدان الهنائي</small>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="time-slot">9:00 - 10:00</td>
+                                <td>
+                                    <span class="workshop-name">مناحل العسل</span><br>
+                                    <small>مهاري ريادي - حامد الشبنوتي</small>
+                                </td>
+                                <td>
+                                    <span class="workshop-name">الرياضيات والرياضة</span><br>
+                                    <small>علمي ترفيهي - درويش الغافري</small>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="time-slot">10:30 - 11:30</td>
+                                <td>
+                                    <span class="workshop-name">ورشة الشطرنج</span><br>
+                                    <small>ثقافي علمي مهاري - حمدان الهنائي</small>
+                                </td>
+                                <td>
+                                    <span class="workshop-name">مهارات السباحة</span><br>
+                                    <small>ثقافي مهاري - إبراهيم العبري</small>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="time-slot">11:30 - 12:30</td>
+                                <td>
+                                    <span class="workshop-name">الرياضيات والرياضة</span><br>
+                                    <small>علمي ترفيهي - درويش الغافري</small>
+                                </td>
+                                <td>
+                                    <span class="workshop-name">مناحل العسل</span><br>
+                                    <small>مهاري ريادي - حامد الشبنوتي</small>
+                                </td>
+                            </tr>
+                            
+                            <!-- الثلاثاء 8/7 -->
+                            <tr>
+                                <td rowspan="4">الثلاثاء<br>8 يوليو</td>
+                                <td class="time-slot">8:00 - 9:00</td>
+                                <td>
+                                    <span class="workshop-name">الأمن والسلامة</span><br>
+                                    <small>اجتماعي مهاري - ناصر الناصري</small>
+                                </td>
+                                <td>
+                                    <span class="workshop-name">السمت العماني</span><br>
+                                    <small>قيمي وطني - سالم الجساسي</small>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="time-slot">9:00 - 10:00</td>
+                                <td>
+                                    <span class="workshop-name">الكتابة الروائية</span><br>
+                                    <small>أدبي ثقافي - سلطان الشيباني</small>
+                                </td>
+                                <td>
+                                    <span class="workshop-name">الألعاب الشعبية</span><br>
+                                    <small>رياضي ترفيهي - درويش الغافري</small>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="time-slot">10:30 - 11:30</td>
+                                <td>
+                                    <span class="workshop-name">السمت العماني</span><br>
+                                    <small>قيمي وطني - سالم الجساسي</small>
+                                </td>
+                                <td>
+                                    <span class="workshop-name">الأمن والسلامة</span><br>
+                                    <small>اجتماعي مهاري - ناصر الناصري</small>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="time-slot">11:30 - 12:30</td>
+                                <td>
+                                    <span class="workshop-name">الألعاب الشعبية</span><br>
+                                    <small>رياضي ترفيهي - درويش الغافري</small>
+                                </td>
+                                <td>
+                                    <span class="workshop-name">الكتابة الروائية</span><br>
+                                    <small>أدبي ثقافي - سلطان الشيباني</small>
+                                </td>
+                            </tr>
+                            
+                            <!-- الأربعاء 9/7 -->
+                            <tr>
+                                <td rowspan="4">الأربعاء<br>9 يوليو</td>
+                                <td class="time-slot">8:00 - 9:00</td>
+                                <td>
+                                    <span class="workshop-name">الخط العربي</span><br>
+                                    <small>علمي ثقافي - عبدالله الوائلي</small>
+                                </td>
+                                <td>
+                                    <span class="workshop-name">العمل الخيري</span><br>
+                                    <small>اجتماعي تطوعي - طلال العبري</small>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="time-slot">9:00 - 10:00</td>
+                                <td>
+                                    <span class="workshop-name">الرماية</span><br>
+                                    <small>مهاري اجتماعي - ناصر الزيدي</small>
+                                </td>
+                                <td>
+                                    <span class="workshop-name">البث التلفزيوني</span><br>
+                                    <small>فني ابداعي - عبدالسلام المعمري</small>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="time-slot">10:30 - 11:30</td>
+                                <td>
+                                    <span class="workshop-name">العمل الخيري</span><br>
+                                    <small>اجتماعي تطوعي - طلال العبري</small>
+                                </td>
+                                <td>
+                                    <span class="workshop-name">الخط العربي</span><br>
+                                    <small>علمي ثقافي - عبدالله الوائلي</small>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="time-slot">11:30 - 12:30</td>
+                                <td>
+                                    <span class="workshop-name">البث التلفزيوني</span><br>
+                                    <small>فني ابداعي - عبدالسلام المعمري</small>
+                                </td>
+                                <td>
+                                    <span class="workshop-name">الرماية</span><br>
+                                    <small>مهاري اجتماعي - ناصر الزيدي</small>
+                                </td>
+                            </tr>
+                            
+                            <!-- الخميس 10/7 -->
+                            <tr>
+                                <td rowspan="3">الخميس<br>10 يوليو</td>
+                                <td class="time-slot">8:00 - 10:00</td>
+                                <td colspan="2">
+                                    <span class="workshop-name">الذكاء الاصطناعي</span><br>
+                                    <small>تعليمي تقني - سلطان الوائلي</small>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="time-slot">10:30 - 12:30</td>
+                                <td>
+                                    <span class="workshop-name">التمثيل المسرحي</span><br>
+                                    <small>فني - أحمد الحوسني</small>
+                                </td>
+                                <td>
+                                    <span class="workshop-name">الذكاء الاصطناعي</span><br>
+                                    <small>تعليمي تقني - سلطان الوائلي</small>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <div id="week2" class="tab-content">
+                <h3 style="text-align: center; margin-bottom: 20px; color: var(--primary-color);">الأسبوع الثاني: 11 - 17 يوليو</h3>
+                <div class="table-responsive">
+                    <table class="schedule-table">
+                        <thead>
+                            <tr>
+                                <th>اليوم</th>
+                                <th>الفترة</th>
+                                <th>المجموعة الأولى</th>
+                                <th>المجموعة الثانية</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- الأحد 11/7 -->
+                            <tr>
+                                <td rowspan="4">الأحد<br>11 يوليو</td>
+                                <td class="time-slot">8:00 - 9:00</td>
+                                <td>
+                                    <span class="workshop-name">ورشة أردوينو</span><br>
+                                    <small>علمي تقني - مالك المعمري</small>
+                                </td>
+                                <td>
+                                    <span class="workshop-name">لغة الإشارة</span><br>
+                                 
+   <small>ثقافي - سعيد المجرفي</small
+                        <!-- الاثنين 22/7 -->
+                        <tr>
+                            <td rowspan="4">الاثنين<br>22 يوليو</td>
+                            <td class="time-slot">8:00 - 9:00</td>
+                            <td>
+                                <span class="workshop-name">مهارات السباحة</span><br>
+                                <small>ثقافي مهاري - إبراهيم العبري</small>
+                            </td>
+                            <td>
+                                <span class="workshop-name">ورشة الشطرنج</span><br>
+                                <small>ثقافي علمي مهاري - حمدان الهنائي</small>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="time-slot">9:00 - 10:00</td>
+                            <td>
+                                <span class="workshop-name">مهارات السباحة</span><br>
+                                <small>ثقافي مهاري - إبراهيم العبري</small>
+                            </td>
+                            <td>
+                                <span class="workshop-name">الرياضيات والرياضة</span><br>
+                                <small>علمي ترفيهي - درويش الغافري</small>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="time-slot">10:30 - 11:30</td>
+                            <td>
+                                <span class="workshop-name">ورشة الشطرنج</span><br>
+                                <small>ثقافي علمي مهاري - حمدان الهنائي</small>
+                            </td>
+                            <td>
+                                <span class="workshop-name">مهارات السباحة</span><br>
+                                <small>ثقافي مهاري - إبراهيم العبري</small>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="time-slot">11:30 - 12:30</td>
+                            <td>
+                                <span class="workshop-name">الرياضيات والرياضة</span><br>
+                                <small>علمي ترفيهي - درويش الغافري</small>
+                            </td>
+                            <td>
+                                <span class="workshop-name">مهارات السباحة</span><br>
+                                <small>ثقافي مهاري - إبراهيم العبري</small>
+                            </td>
+                        </tr>
+                        
+                        <!-- الثلاثاء 23/7 -->
+                        <tr>
+                            <td rowspan="2">الثلاثاء<br>23 يوليو</td>
+                            <td class="time-slot">8:00 - 9:00</td>
+                            <td>
+                                <span class="workshop-name">الدفاع المدني</span><br>
+                                <small>علمي مهاري - ناصر الناصري</small>
+                            </td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td class="time-slot">11:30 - 12:30</td>
+                            <td>-</td>
+                            <td>
+                                <span class="workshop-name">الدفاع المدني</span><br>
+                                <small>علمي مهاري - ناصر الناصري</small>
+                            </td>
+                        </tr>
+                        
+                        <!-- الأربعاء 24/7 -->
+                        <tr>
+                            <td rowspan="2">الأربعاء<br>24 يوليو</td>
+                            <td class="time-slot">8:00 - 9:00</td>
+                            <td>
+                                <span class="workshop-name">المكتبة الثقافية</span><br>
+                                <small>علمي ثقافي - سعيد الوائلي</small>
+                            </td>
+                            <td>
+                                <span class="workshop-name">العمل الخيري</span><br>
+                                <small>اجتماعي تطوعي - طلال العبري</small>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="time-slot">9:00 - 10:00</td>
+                            <td>
+                                <span class="workshop-name">الرماية</span><br>
+                                <small>مهاري اجتماعي - ناصر الزيدي</small>
+                            </td>
+                            <td>
+                                <span class="workshop-name">البث التلفزيوني</span><br>
+                                <small>فني ابداعي - عبدالسلام المعمري</small>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Registration Section -->
+<section id="registration" class="registration">
+    <div class="container">
+        <h2>سجل الآن في مركز حذيفية بن اليمان الصيفي</h2>
+        <p>لا تفوت فرصة المشاركة في برنامجنا الصيفي المميز الذي يجمع بين التعليم والترفيه وتنمية المهارات</p>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfzml82utKmfZ8o5wYvwffoxfUBCin7JQ6H4wacCLY0Uhi7ig/viewform?usp=header" class="btn btn-primary" target="_blank">
+            <i class="fas fa-user-plus"></i>
+            سجل الآن
+        </a>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer id="contact">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>عن المركز</h3>
+                <p>مركز حذيفية بن اليمان الصيفي هو برنامج تعليمي ترفيهي يهدف إلى تنمية مهارات الطلاب من الصف الخامس إلى الحادي عشر خلال إجازة الصيف.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-column">
+                <h3>روابط سريعة</h3>
+                <ul class="footer-links">
+                    <li><a href="#about"><i class="fas fa-chevron-left"></i> عن المركز</a></li>
+                    <li><a href="#goals"><i class="fas fa-chevron-left"></i> أهداف المركز</a></li>
+                    <li><a href="#schedule"><i class="fas fa-chevron-left"></i> جدول الورش</a></li>
+                    <li><a href="#registration"><i class="fas fa-chevron-left"></i> التسجيل</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3>معلومات التواصل</h3>
+                <ul class="footer-links">
+                    <li><a href="#"><i class="fas fa-chevron-left"></i> البريد الإلكتروني: info@hudhaifa-center.edu</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-left"></i> الهاتف: 1234567890+</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-left"></i> العنوان: سلطنة عمان، محافظة الداخلية</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>جميع الحقوق محفوظة &copy; 2024 مركز حذيفية بن اليمان الصيفي</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+    function openTab(evt, tabName) {
+        var i, tabcontent, tabbuttons;
+        
+        tabcontent = document.getElementsByClassName("tab-content");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].classList.remove("active");
+        }
+        
+        tabbuttons = document.getElementsByClassName("tab-btn");
+        for (i = 0; i < tabbuttons.length; i++) {
+            tabbuttons[i].classList.remove("active");
+        }
+        
+        document.getElementById(tabName).classList.add("active");
+        evt.currentTarget.classList.add("active");
+    }
+    
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+</script>
