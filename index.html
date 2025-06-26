@@ -411,6 +411,236 @@
             font-weight: bold;
         }
         
+        /* Events Documentation Section */
+        .events-documentation {
+            background-color: #f9f9f9;
+            padding: 80px 0;
+        }
+        
+        .events-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .events-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .events-header h2 {
+            font-size: 32px;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .events-header h2::after {
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            right: 50%;
+            transform: translateX(50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--secondary-color);
+        }
+        
+        .events-header p {
+            font-size: 18px;
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .video-placeholder {
+            background: linear-gradient(135deg, rgba(44, 94, 146, 0.1), rgba(247, 183, 51, 0.1));
+            border-radius: 10px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+            margin-bottom: 40px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .video-placeholder::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://a.top4top.io/p_3463hcooj1.png') no-repeat center center;
+            background-size: contain;
+            opacity: 0.05;
+            z-index: 0;
+        }
+        
+        .video-placeholder-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .video-placeholder h3 {
+            font-size: 24px;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+        
+        .video-placeholder p {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 20px;
+        }
+        
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+            margin: 0 auto;
+            max-width: 800px;
+        }
+        
+        .video-wrapper video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .coming-soon {
+            text-align: center;
+            font-size: 20px;
+            color: var(--primary-color);
+            font-weight: bold;
+            margin-top: 30px;
+            padding: 15px;
+            background-color: rgba(247, 183, 51, 0.1);
+            border-radius: 8px;
+            border-left: 4px solid var(--secondary-color);
+        }
+        
+        .events-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .event-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            border-top: 4px solid var(--secondary-color);
+        }
+        
+        .event-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .event-media {
+            height: 200px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .event-media img, 
+        .event-media video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .event-card:hover .event-media img,
+        .event-card:hover .event-media video {
+            transform: scale(1.05);
+        }
+        
+        .event-date {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: bold;
+            z-index: 1;
+        }
+        
+        .event-content {
+            padding: 20px;
+        }
+        
+        .event-content h3 {
+            font-size: 20px;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+        
+        .event-content p {
+            color: #666;
+            margin-bottom: 15px;
+            font-size: 15px;
+        }
+        
+        .event-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 15px;
+            font-size: 14px;
+            color: #888;
+        }
+        
+        .event-meta .location {
+            display: flex;
+            align-items: center;
+        }
+        
+        .event-meta .location i {
+            margin-left: 5px;
+            color: var(--secondary-color);
+        }
+        
+        .view-more {
+            text-align: center;
+            margin-top: 40px;
+        }
+        
+        .view-more-btn {
+            display: inline-flex;
+            align-items: center;
+            padding: 12px 25px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        
+        .view-more-btn:hover {
+            background-color: #1e4b7b;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .view-more-btn i {
+            margin-left: 8px;
+        }
+        
         /* Registration Section */
         .registration {
             background: linear-gradient(rgba(44, 94, 146, 0.9), rgba(44, 94, 146, 0.95)), url('https://a.top4top.io/p_3463y8o2n1.jpeg') no-repeat center center;
@@ -550,6 +780,10 @@
             .date-badge {
                 margin-top: 20px;
             }
+            
+            .events-grid {
+                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            }
         }
         
         @media (max-width: 768px) {
@@ -586,6 +820,14 @@
             .section-title h2 {
                 font-size: 28px;
             }
+            
+            .events-header h2 {
+                font-size: 28px;
+            }
+            
+            .video-placeholder h3 {
+                font-size: 22px;
+            }
         }
         
         @media (max-width: 576px) {
@@ -607,6 +849,14 @@
             
             .goal-card {
                 padding: 20px;
+            }
+            
+            .events-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .event-media {
+                height: 180px;
             }
         }
     </style>
@@ -638,6 +888,7 @@
                 <li><a href="#about">عن المركز</a></li>
                 <li><a href="#goals">الأهداف</a></li>
                 <li><a href="#schedule">جدول الورش</a></li>
+                <li><a href="#events">توثيق الفعاليات</a></li>
                 <li><a href="#registration">التسجيل</a></li>
                 <li><a href="#contact">اتصل بنا</a></li>
             </ul>
@@ -1072,6 +1323,61 @@
     </div>
 </section>
 
+<!-- Events Documentation Section -->
+<section id="events" class="section events-documentation">
+    <div class="container">
+        <div class="events-header">
+            <h2>توثيق الفعاليات</h2>
+            <p>هنا نشارككم أجمل اللحظات والأنشطة والفعاليات التي نعيشها يومياً في مركز حذيفة بن اليمان الصيفي</p>
+        </div>
+        
+        <div class="video-placeholder">
+            <div class="video-placeholder-content">
+                <h3>فيديو تعريفي عن الفعاليات</h3>
+                <p>استمتع بمشاهدة هذا الفيديو الذي يلخص أجواء الفعاليات في مركزنا الصيفي حتى بداية البرنامج</p>
+                <div class="video-wrapper">
+                    <video controls poster="https://a.top4top.io/p_3463hcooj1.png">
+                        <source src="https://i.top4top.io/m_3464bps521.mp4" type="video/mp4">
+                        متصفحك لا يدعم تشغيل الفيديو، يرجى تحديث المتصفح أو استخدام متصفح آخر.
+                    </video>
+                </div>
+            </div>
+        </div>
+        
+        <div class="coming-soon">
+            <i class="fas fa-camera"></i>
+            سيتم توثيق الفعاليات يومياً خلال فترة البرنامج الصيفي
+        </div>
+        
+        <div class="events-grid">
+            <!-- سيتم إضافة البطاقات هنا عند توثيق الفعاليات -->
+            <!-- مثال على بطاقة فعالية -->
+            <!--
+            <div class="event-card">
+                <div class="event-media">
+                    <span class="event-date">6 يوليو</span>
+                    <img src="event1.jpg" alt="فعالية اليوم الأول">
+                </div>
+                <div class="event-content">
+                    <h3>اليوم الأول: ورشة الأردوينو</h3>
+                    <p>استمتع الطلاب بتعلم أساسيات الأردوينو وتطبيقاته العملية في ورشة ماتعة قدمها الأستاذ مالك المعمري</p>
+                    <div class="event-meta">
+                        <span class="location"><i class="fas fa-map-marker-alt"></i> قاعة الابتكار</span>
+                    </div>
+                </div>
+            </div>
+            -->
+        </div>
+        
+        <div class="view-more">
+            <a href="#" class="view-more-btn">
+                <i class="fas fa-images"></i>
+                عرض المزيد من الفعاليات
+            </a>
+        </div>
+    </div>
+</section>
+
 <!-- Registration Section -->
 <section id="registration" class="registration">
     <div class="container">
@@ -1092,8 +1398,8 @@
                 <h3>عن المركز</h3>
                 <p>مركز حذيفية بن اليمان الصيفي هو برنامج تعليمي ترفيهي يهدف إلى تنمية مهارات الطلاب من الصف الخامس إلى الحادي عشر خلال إجازة الصيف.</p>
                 <div class="social-links">
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="https://x.com/huthaifabat?s=11&t=kvxxmofQqmQXXMpbKqby2g" target="_blank"><i class="fab fa-twitter"></i></a>
+                 <a href="https://www.instagram.com/huthaifabat?igsh=MXA3ZW4zZTE5dW1tOA==" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
                     <a href="#"><i class="fab fa-facebook-f"></i></a>
                     <a href="#"><i class="fab fa-youtube"></i></a>
                 </div>
@@ -1105,6 +1411,7 @@
                     <li><a href="#about"><i class="fas fa-chevron-left"></i> عن المركز</a></li>
                     <li><a href="#goals"><i class="fas fa-chevron-left"></i> أهداف المركز</a></li>
                     <li><a href="#schedule"><i class="fas fa-chevron-left"></i> جدول الورش</a></li>
+                    <li><a href="#events"><i class="fas fa-chevron-left"></i> توثيق الفعاليات</a></li>
                     <li><a href="#registration"><i class="fas fa-chevron-left"></i> التسجيل</a></li>
                 </ul>
             </div>
@@ -1153,4 +1460,6 @@
             });
         });
     });
-</script>t>
+</script>
+</body>
+</html>
