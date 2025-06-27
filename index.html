@@ -140,6 +140,12 @@
             color: white;
         }
         
+        /* أنماط القائمة المنسدلة للتسجيل */
+        .register-dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        
         .register-btn {
             background-color: var(--secondary-color);
             color: white;
@@ -150,6 +156,8 @@
             transition: all 0.3s ease;
             display: flex;
             align-items: center;
+            border: none;
+            cursor: pointer;
         }
         
         .register-btn:hover {
@@ -158,8 +166,38 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
         
-        .register-btn i {
-            margin-left: 8px;
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            right: 0;
+            background-color: #f9f9f9;
+            min-width: 250px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .dropdown-content a {
+            color: #333;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: right;
+            transition: all 0.3s ease;
+        }
+        
+        .dropdown-content a:hover {
+            background-color: #2c5e92;
+            color: white;
+        }
+        
+        .register-dropdown:hover .dropdown-content {
+            display: block;
+        }
+        
+        .register-dropdown:hover .register-btn {
+            background-color: #e6a52a;
         }
         
         /* Hero Section */
@@ -784,6 +822,10 @@
             .events-grid {
                 grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             }
+            
+            .dropdown-content {
+                min-width: 200px;
+            }
         }
         
         @media (max-width: 768px) {
@@ -827,6 +869,16 @@
             
             .video-placeholder h3 {
                 font-size: 22px;
+            }
+            
+            .register-dropdown {
+                width: 100%;
+            }
+            
+            .dropdown-content {
+                right: auto;
+                left: 0;
+                width: 100%;
             }
         }
         
@@ -892,10 +944,15 @@
                 <li><a href="#registration">التسجيل</a></li>
                 <li><a href="#contact">اتصل بنا</a></li>
             </ul>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfzml82utKmfZ8o5wYvwffoxfUBCin7JQ6H4wacCLY0Uhi7ig/viewform?usp=header" class="register-btn" target="_blank">
-                <i class="fas fa-user-plus"></i>
-                سجل الآن
-            </a>
+            <div class="register-dropdown">
+                <button class="register-btn">
+                    <i class="fas fa-user-plus"></i> سجل الآن <i class="fas fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfzml82utKmfZ8o5wYvwffoxfUBCin7JQ6H4wacCLY0Uhi7ig/viewform?usp=header" target="_blank">للصفوف 5-8 (الأسبوع الأول)</a>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLScYDL9Y7WR13Sxlvi6LNcZB5W1Pxbl0ODFrsHABG6tvSRtnGw/viewform?usp=header" target="_blank">للصفوف 9-11 (الأسبوع الثاني)</a>
+                </div>
+            </div>
         </div>
     </nav>
     
@@ -905,13 +962,17 @@
             <h2>اكتشف مواهبك وطور مهاراتك في مركزنا الصيفي</h2>
             <p>برنامج متكامل يجمع بين التعليم والترفيه لطلاب الصف الخامس إلى الحادي عشر خلال إجازة الصيف</p>
             <div class="hero-btns">
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLSfzml82utKmfZ8o5wYvwffoxfUBCin7JQ6H4wacCLY0Uhi7ig/viewform?usp=header" class="btn btn-primary" target="_blank">
-                    <i class="fas fa-user-plus"></i>
-                    سجل الآن
-                </a>
+                <div class="register-dropdown">
+                    <button class="btn btn-primary">
+                        <i class="fas fa-user-plus"></i> سجل الآن <i class="fas fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfzml82utKmfZ8o5wYvwffoxfUBCin7JQ6H4wacCLY0Uhi7ig/viewform?usp=header" target="_blank">للصفوف 5-8 (الأسبوع الأول)</a>
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLScYDL9Y7WR13Sxlvi6LNcZB5W1Pxbl0ODFrsHABG6tvSRtnGw/viewform?usp=header" target="_blank">للصفوف 9-11 (الأسبوع الثاني)</a>
+                    </div>
+                </div>
                 <a href="#schedule" class="btn btn-secondary">
-                    <i class="far fa-calendar-alt"></i>
-                    جدول الورش
+                    <i class="far fa-calendar-alt"></i> جدول الورش
                 </a>
             </div>
         </div>
